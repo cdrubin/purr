@@ -15,7 +15,12 @@ elif [[ ${STATE} =~ ^Exited ]]; then
     docker start $ID
 else
     echo "purrs container starting..."
-    docker run -v `pwd`:/root -d  --name purrs-container --entrypoint /root/conf/docker_entrypoint.sh -i openresty/openresty:alpine-fat
+    docker run \
+      -v "$SCRIPT_DIR/log:/usr/local/openresty/nginx/logs" \
+      -v "$SCRIPT_DIR/conf/nginx:/usr/local/openresty/nginx/conf" \
+      -v "$SCRIPT_DIR/site:/usr/local/openresty/site" \
+      -v "$SCRIPT_DIR:/root" \
+      -d --name purrs-container --entrypoint /root/conf/purrs/docker_entrypoint.sh -i openresty/openresty:alpine-fat
 fi
 
 popd > /dev/null
