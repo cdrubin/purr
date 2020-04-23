@@ -16,8 +16,11 @@ elif [[ ${STATE} =~ ^Exited ]]; then
 else
     echo "purrs container starting..."
     docker run \
-      -v "$SCRIPT_DIR/log:/usr/local/openresty/nginx/logs" \
+      -v "$SCRIPT_DIR/logs/nginx:/usr/local/openresty/nginx/logs" \
       -v "$SCRIPT_DIR/conf/nginx:/usr/local/openresty/nginx/conf" \
+      -v "$SCRIPT_DIR/logs/redis:/var/log/redis" \
+      -v "$SCRIPT_DIR/conf/redis:/usr/share/redis" \
+      -v "$SCRIPT_DIR/conf/postgresql:/usr/share/postgresql" \
       -v "$SCRIPT_DIR/site:/usr/local/openresty/site" \
       -v "$SCRIPT_DIR:/root" \
       -d --name purrs-container --entrypoint /root/conf/purrs/docker_entrypoint.sh -i openresty/openresty:alpine-fat

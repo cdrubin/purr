@@ -14,9 +14,10 @@ apk add postgresql
 touch started
 
 # start redis
-/usr/bin/redis-server /root/conf/redis/redis.conf
+/usr/bin/redis-server /usr/share/redis/redis.conf
 
 # start postgresql
+su - postgres -c "/usr/bin/postgres -D /usr/share/postgresql"
 
 # start openresty
 /usr/local/openresty/bin/openresty -g "daemon off;"
