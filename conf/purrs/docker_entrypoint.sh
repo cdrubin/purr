@@ -4,14 +4,19 @@
 if [ -f "started" ]; then
     echo "Already ran '$0' once. Holding indefinitely for debugging."
     /bin/sh
-# if first run
-else
-    # install some useful luarocks
-    /usr/local/openresty/luajit/bin/luarocks install uuid
-    /usr/local/openresty/luajit/bin/luarocks install middleclass
-    /usr/local/openresty/luajit/bin/luarocks install pash
 fi
+# if first run
+
+# install redis and postgresql
+apk add redis
+apk add postgresql
+
 touch started
 
-# for first time runs this will be be called
+# start redis
+/usr/bin/redis-server /root/conf/redis/redis.conf
+
+# start postgresql
+
+# start openresty
 /usr/local/openresty/bin/openresty -g "daemon off;"
