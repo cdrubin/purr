@@ -1,6 +1,6 @@
 #!/bin/bash
 
-CONTAINER=$( docker ps -a --filter "name=purrs-container" --format "{{.ID}} {{.Status}}" )
+CONTAINER=$( docker ps -a --filter "name=purr-container" --format "{{.ID}} {{.Status}}" )
 ID=${CONTAINER%% *}
 STATE=${CONTAINER#* }
 
