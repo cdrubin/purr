@@ -22,7 +22,7 @@ else
       -v "$SCRIPT_DIR/conf/redis:/usr/share/redis" \
       -v "$SCRIPT_DIR/conf/postgresql:/usr/share/postgresql" \
       -v "$SCRIPT_DIR/site:/usr/local/openresty/site" \
-      -v "$SCRIPT_DIR:/root" \
+      -v "$SCRIPT_DIR:/root/purrs" \
       -d --name purrs-container --entrypoint /root/conf/purrs/docker_entrypoint.sh -i openresty/openresty:alpine-fat
 fi
 
