@@ -9,7 +9,7 @@ if [ ! -f "started" ]; then
     # prepare postgresql if not done before
     if [ ! -f /var/lib/postgresql/postgresql.conf ]; then
         chown postgres /var/lib/postgresql; chmod 750 /var/lib/postgresql
-        su - postgres -c "initdb /var/lib/postgresql" &> /root/output_of_initdb
+        su - postgres -c "initdb /var/lib/postgresql"
         cp /root/purr/conf/postgresql/postgresql.conf /var/lib/postgresql
         mkdir /run/postgresql
         chown -R postgres /run/postgresql
