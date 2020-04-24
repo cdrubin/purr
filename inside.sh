@@ -4,4 +4,8 @@ CONTAINER=$( docker ps -a --filter "name=purr-container" --format "{{.ID}} {{.St
 ID=${CONTAINER%% *}
 STATE=${CONTAINER#* }
 
-docker exec -it $ID /bin/sh --login
+if [ "$ID" != "" ]; then
+    docker exec -it $ID /bin/sh --login
+else
+    echo "purr container not found"
+fi
