@@ -8,7 +8,7 @@ STATE=${CONTAINER#* }
 
 if [[ ${STATE} =~ ^Up ]]; then
     echo "purr (container '$ID') being stopped..."
-    docker stop $ID
+    docker stop -t 2 $ID
 elif [[ ${STATE} =~ ^Exited ]]; then
     echo "purr (container '$ID') is already stopped."
     read -r -d '' CHOICES <<EOL 
