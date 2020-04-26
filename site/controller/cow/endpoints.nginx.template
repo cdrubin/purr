@@ -1,0 +1,12 @@
+
+location = %(prefix)s/cow/moo {
+
+  content_by_lua_file '%(app)s/controller/cow/moo.lua';
+
+}
+
+location = %(prefix)s/cow/rows {
+  
+  content_by_lua_file '%(app)s/controller/cow/rows.lua';
+  
+}

@@ -1,0 +1,12 @@
+
+location = %(prefix)s/bull/lo {
+
+  content_by_lua_file '%(app)s/controller/bull/lo.lua';
+
+}
+
+location = %(prefix)s/bull/rows {
+  
+  content_by_lua_file '%(app)s/controller/bull/rows.lua';
+  
+}

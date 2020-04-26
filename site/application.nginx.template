@@ -1,0 +1,20 @@
+
+location = /hello {
+
+  content_by_lua '
+    -- be careful about using single quotes within a content_by_lua block
+    ngx.header.content_type = "text/plain";
+    ngx.say( "hello" )
+  ';
+
+}
+
+
+include '%(app)s/controller/*/endpoints.nginx';
+
+
+root %(app)s/static;
+index index.html;
+location / {
+  try_files $uri $uri/ =404;
+}

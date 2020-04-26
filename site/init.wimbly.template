@@ -1,0 +1,11 @@
+
+-- preprocess application configuration files
+wimbly.preprocess( '$SITES_PREFIX/example', {
+  ['app'] = '$SITES_PREFIX/example',
+  ['prefix'] = '/v2',
+  ['redis_port'] = $REDIS_PORT
+} )
+
+-- during development wrap all content_by_lua_file directives to display errors in browser
+wimbly.debug( '$SITES_PREFIX/example', 'endpoints%.nginx$' )
+

@@ -1,0 +1,215 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/spectre.css@0.5.7/dist/spectre.min.css">
+  
+  <script src="//cdn.jsdelivr.net/npm/hyperapp@1.2.9/dist/hyperapp.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/@hyperapp/router@0.7.1/dist/router.min.js"></script> -->
+</head>
+<body>
+
+<h1>Example site</h1>
+<hr>
+<h2>Grid layout</h2>
+<div class="container">
+  <div class="columns">
+    <div class="col-4"><p>One Third</p></div>
+    <div class="col-4"><button class="btn btn-primary">A Primary Button in One Third</button></div>
+    <div class="col-4"><p>One Third</p></div>
+  </div>
+</div>
+<hr>
+
+<h2>Static table styling</h2>
+<table class="table table-striped" style="width: 600px">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Name</th>
+      <th>Family</th>
+      <th>Year</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td contenteditable="true" style="table-layout: fixed; word-wrap: break-word">Oboe</td>
+      <td>Wind</td>
+      <td>2009</td>
+    </tr>
+
+    <tr>
+      <td>2</td>
+      <td>Flute</td>
+      <td>Wind</td>
+      <td>2012</td>
+    </tr>
+
+    <tr>
+      <td>3</td>
+      <td>Timpani</td>
+      <td>Percussion</td>
+      <td>2010</td>
+    </tr>
+
+  </tbody>
+</table>
+<hr>
+
+<h2>Dynamic table styling</h2>
+<table class="table-striped" style="width: 600px">
+  <thead>
+    <tr>
+      <th>Rating</th>
+      <th>Breed</th>
+      <th>Number</th>
+    </tr>
+  </thead>
+
+  <tbody id="cows_table">
+  </tbody>
+</table>
+
+
+<div id="app"></div>
+
+<div id="app2"></div>
+
+<div id="app3"></div>
+
+<script>
+
+// regular text
+fetch('//localhost:8008/hello')
+  .then( function( response ) {
+    return response.text()
+  } )
+  .then( function ( text ) { 
+    console.log( text )
+  } )
+
+
+const { h, app } = hyperapp
+
+const state = {
+  count: 0,
+  rows: []
+}
+
+const actions = {
+  down: value => state => ({ count: state.count - value }),
+  up: value => state => ({ count: state.count + value })
+}
+
+const view = ( state, actions ) =>
+  h( "div", {}, [
+    h( "h1", {}, state.count ),
+    h( "button", { onclick: () => actions.down(1) }, "–" ),
+    h( "button", { onclick: () => actions.up(1) }, "+" )
+  ])
+
+window.main = app( state, actions, view, document.getElementById( "app" ) )
+
+//window.main = app( state, actions, view, document.getElementById( "app" ) )
+
+
+app( {
+  state2: "Hi.",
+  view: state2 => h("h1", null, state2),
+  container: document.getElementById( "app2" )
+} )
+
+
+//const app2 = hyperapp.app
+const html = hyperapp.html
+
+function CounterList () {
+    return [Counter()]
+}
+CounterList.update = {
+    addCounter: model => model.concat([Counter()]),
+    removeCounter: (model, i) => {
+        var newState = [].concat(model)
+        newState.splice(i, 1)
+        return newState
+    },
+    counter: function (model, ev) {
+        var newState = [].concat(model)
+        var c = newState[ev.index]
+        newState[ev.index] = Counter.update[ev.type](c)
+        return newState
+    }
+}
+
+CounterList.view = function (model, msg) {
+    var counters = model.map(function (counter, i) {
+        var counterView = Counter.view(counter, {
+            add: () => msg.counter({ type: 'add', index: i }),
+            sub: () => msg.counter({ type: 'sub', index: i })
+        })
+
+        return html`
+            <div>
+                ${counterView}
+                <button onclick=${msg.removeCounter.bind(null, i)}>
+                    remove this counter
+                </button>
+            </div>
+        `
+    })
+
+    return html`
+        <div>
+            <button onclick=${msg.addCounter}>new counter</button>
+            ${counters}
+        </div>
+    `
+}
+
+function Counter () {
+    return 0
+}
+Counter.update = {
+    add: model => model + 1,
+    sub: model => model - 1
+}
+Counter.view = function (model, msg) {
+    return html`
+        <div>
+            <button onclick=${msg.add}>+</button>
+            <h1>${model}</h1>
+            <button onclick=${msg.sub} disabled=${model <= 0}>-</button>
+        </div>`
+}
+
+app( {
+    model: CounterList(),
+    update: CounterList.update,
+    view: CounterList.view,
+    container: document.getElementById( "app3" ) 
+} )
+
+
+
+
+
+
+//const node = h("div", { class: "main" }, "Hello World" )  
+  
+// json data  
+fetch('//localhost:8008/v2/cow/rows')
+  .then( function( response ) {
+    return response.json();
+  } )
+  .then( function ( json ) { 
+    // add rows in the dynamic table    
+    console.log( json );
+    
+  } );
+</script>
+
+
+
+</body>
+</html>
