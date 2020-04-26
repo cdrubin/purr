@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="terminal" baseProfile="full" viewBox="0 0 640 410" width="640" version="1.1">
+    <defs>
+        <termtosvg:template_settings xmlns:termtosvg="https://github.com/nbedos/termtosvg">
+            <termtosvg:screen_geometry columns="80" rows="24"/>
+            <termtosvg:animation type="css"/>
+        </termtosvg:template_settings>
+        <style type="text/css" id="generated-style"><![CDATA[#screen {
+                font-family: 'DejaVu Sans Mono', monospace;
+                font-style: normal;
+                font-size: 14px;
+            }
+
+        text {
+            dominant-baseline: text-before-edge;
+            white-space: pre;
+        }
+    
+            :root {
+                --animation-duration: 29595ms;
+            }
+
+            @keyframes roll {
+                0.000%{transform:translateY(0px)}
+0.081%{transform:translateY(-442px)}
+47.782%{transform:translateY(-884px)}
+49.025%{transform:translateY(-1326px)}
+49.350%{transform:translateY(-1768px)}
+49.931%{transform:translateY(-2210px)}
+50.640%{transform:translateY(-2652px)}
+52.566%{transform:translateY(-3094px)}
+52.576%{transform:translateY(-3536px)}
+57.182%{transform:translateY(-3978px)}
+57.466%{transform:translateY(-4420px)}
+58.425%{transform:translateY(-4862px)}
+58.439%{transform:translateY(-5304px)}
+58.446%{transform:translateY(-5746px)}
+65.737%{transform:translateY(-6188px)}
+66.390%{transform:translateY(-6630px)}
+71.107%{transform:translateY(-7072px)}
+71.421%{transform:translateY(-7514px)}
+71.553%{transform:translateY(-7956px)}
+72.384%{transform:translateY(-8398px)}
+74.073%{transform:translateY(-8840px)}
+74.317%{transform:translateY(-9282px)}
+74.546%{transform:translateY(-9724px)}
+76.185%{transform:translateY(-10166px)}
+96.621%{transform:translateY(-10608px)}
+100.000%{transform:translateY(-10608px)}
+            }
+
+            #screen_view {
+                animation-duration: 29595ms;
+                animation-iteration-count:infinite;
+                animation-name:roll;
+                animation-timing-function: steps(1,end);
+                animation-fill-mode: forwards;
+            }
+        ]]></style>
+        <style type="text/css" id="user-style">
+            /* The colors defined below are the default 16 colors used for rendering text of the terminal. Adjust
+               them as needed.
+               PowerShell colors based on https://en.wikipedia.org/wiki/ANSI_escape_code#Colors */
+            .foreground {fill: #cccccc;}
+            .background {fill: #0c0c0c;}
+            .color0 {fill: #0c0c0c;}
+            .color1 {fill: #c50f1f;}
+            .color2 {fill: #13a10e;}
+            .color3 {fill: #c19c00;}
+            .color4 {fill: #0037da;}
+            .color5 {fill: #881798;}
+            .color6 {fill: #3a96dd;}
+            .color7 {fill: #cccccc;}
+            .color8 {fill: #767676;}
+            .color9 {fill: #e74856;}
+            .color10 {fill: #16c60c;}
+            .color11 {fill: #f9f1a5;}
+            .color12 {fill: #3b78ff;}
+            .color13 {fill: #b4009e;}
+            .color14 {fill: #61d6d6;}
+            .color15 {fill: #f2f2f2;}
+        </style>
+    </defs>
+    <svg id="screen" width="640" height="408" viewBox="0 0 640 408" preserveAspectRatio="xMidYMin slice">
+    <rect class="background" height="100%" width="100%" x="0" y="0"/><defs><g id="g1"><text x="0" textLength="8" class="background"> </text></g><g id="g2"><text x="0" textLength="104" font-weight="bold" class="color10">cdrubin@molly</text><text x="104" textLength="8" class="foreground">:</text><text x="112" textLength="88" font-weight="bold" class="color12">~/work/purr</text><text x="200" textLength="16" class="foreground">$ </text><text x="216" textLength="8" class="background"> </text></g><g id="g3"><text x="0" textLength="104" font-weight="bold" class="color10">cdrubin@molly</text><text x="104" textLength="8" class="foreground">:</text><text x="112" textLength="88" font-weight="bold" class="color12">~/work/purr</text><text x="200" textLength="24" class="foreground">$ c</text><text x="224" textLength="8" class="background"> </text></g><g id="g4"><text x="0" textLength="104" font-weight="bold" class="color10">cdrubin@molly</text><text x="104" textLength="8" class="foreground">:</text><text x="112" textLength="88" font-weight="bold" class="color12">~/work/purr</text><text x="200" textLength="32" class="foreground">$ cl</text><text x="232" textLength="8" class="background"> </text></g><g id="g5"><text x="0" textLength="104" font-weight="bold" class="color10">cdrubin@molly</text><text x="104" textLength="8" class="foreground">:</text><text x="112" textLength="88" font-weight="bold" class="color12">~/work/purr</text><text x="200" textLength="40" class="foreground">$ cle</text><text x="240" textLength="8" class="background"> </text></g><g id="g6"><text x="0" textLength="104" font-weight="bold" class="color10">cdrubin@molly</text><text x="104" textLength="8" class="foreground">:</text><text x="112" textLength="88" font-weight="bold" class="color12">~/work/purr</text><text x="200" textLength="48" class="foreground">$ clea</text><text x="248" textLength="8" class="background"> </text></g><g id="g7"><text x="0" textLength="104" font-weight="bold" class="color10">cdrubin@molly</text><text x="104" textLength="8" class="foreground">:</text><text x="112" textLength="88" font-weight="bold" class="color12">~/work/purr</text><text x="200" textLength="56" class="foreground">$ clear</text><text x="256" textLength="8" class="background"> </text></g><g id="g8"><text x="0" textLength="104" font-weight="bold" class="color10">cdrubin@molly</text><text x="104" textLength="8" class="foreground">:</text><text x="112" textLength="88" font-weight="bold" class="color12">~/work/purr</text><text x="200" textLength="56" class="foreground">$ clear</text></g><g id="g9"><text x="0" textLength="104" font-weight="bold" class="color10">cdrubin@molly</text><text x="104" textLength="8" class="foreground">:</text><text x="112" textLength="88" font-weight="bold" class="color12">~/work/purr</text><text x="200" textLength="16" class="foreground">$ </text><text x="216" textLength="8" class="background"> </text><text x="224" textLength="32" class="foreground">    </text></g><g id="g10"><text x="0" textLength="104" font-weight="bold" class="color10">cdrubin@molly</text><text x="104" textLength="8" class="foreground">:</text><text x="112" textLength="88" font-weight="bold" class="color12">~/work/purr</text><text x="200" textLength="24" class="foreground">$ l</text><text x="224" textLength="8" class="background"> </text><text x="232" textLength="24" class="foreground">   </text></g><g id="g11"><text x="0" textLength="104" font-weight="bold" class="color10">cdrubin@molly</text><text x="104" textLength="8" class="foreground">:</text><text x="112" textLength="88" font-weight="bold" class="color12">~/work/purr</text><text x="200" textLength="32" class="foreground">$ ls</text><text x="232" textLength="8" class="background"> </text><text x="240" textLength="16" class="foreground">  </text></g><g id="g12"><text x="0" textLength="104" font-weight="bold" class="color10">cdrubin@molly</text><text x="104" textLength="8" class="foreground">:</text><text x="112" textLength="88" font-weight="bold" class="color12">~/work/purr</text><text x="200" textLength="56" class="foreground">$ ls   </text></g><g id="g13"><text x="0" textLength="8" font-weight="bold" class="color12">.</text><text x="8" textLength="32" class="foreground">/   </text><text x="40" textLength="32" font-weight="bold" class="color12">.git</text><text x="72" textLength="24" class="foreground">/  </text><text x="96" textLength="32" font-weight="bold" class="color12">data</text><text x="128" textLength="24" class="foreground">/  </text><text x="152" textLength="24" font-weight="bold" class="color12">lib</text><text x="176" textLength="32" class="foreground">/   </text><text x="208" textLength="32" font-weight="bold" class="color12">site</text><text x="240" textLength="216" class="foreground">/  README.md   intro.cast  </text><text x="456" textLength="56" font-weight="bold" class="color10">stop.sh</text><text x="512" textLength="8" class="foreground">*</text></g><g id="g14"><text x="0" textLength="16" font-weight="bold" class="color12">..</text><text x="16" textLength="24" class="foreground">/  </text><text x="40" textLength="32" font-weight="bold" class="color12">conf</text><text x="72" textLength="24" class="foreground">/  </text><text x="96" textLength="24" font-weight="bold" class="color12">doc</text><text x="120" textLength="32" class="foreground">/   </text><text x="152" textLength="32" font-weight="bold" class="color12">logs</text><text x="184" textLength="24" class="foreground">/  </text><text x="208" textLength="24" font-weight="bold" class="color12">tmp</text><text x="232" textLength="32" class="foreground">/   </text><text x="264" textLength="72" font-weight="bold" class="color10">inside.sh</text><text x="336" textLength="24" class="foreground">*  </text><text x="360" textLength="48" font-weight="bold" class="color10">run.sh</text><text x="408" textLength="8" class="foreground">*</text></g><g id="g15"><text x="0" textLength="104" font-weight="bold" class="color10">cdrubin@molly</text><text x="104" textLength="8" class="foreground">:</text><text x="112" textLength="88" font-weight="bold" class="color12">~/work/purr</text><text x="200" textLength="24" class="foreground">$ .</text><text x="224" textLength="8" class="background"> </text></g><g id="g16"><text x="0" textLength="104" font-weight="bold" class="color10">cdrubin@molly</text><text x="104" textLength="8" class="foreground">:</text><text x="112" textLength="88" font-weight="bold" class="color12">~/work/purr</text><text x="200" textLength="32" class="foreground">$ ./</text><text x="232" textLength="8" class="background"> </text></g><g id="g17"><text x="0" textLength="104" font-weight="bold" class="color10">cdrubin@molly</text><text x="104" textLength="8" class="foreground">:</text><text x="112" textLength="88" font-weight="bold" class="color12">~/work/purr</text><text x="200" textLength="40" class="foreground">$ ./r</text><text x="240" textLength="8" class="background"> </text></g><g id="g18"><text x="0" textLength="104" font-weight="bold" class="color10">cdrubin@molly</text><text x="104" textLength="8" class="foreground">:</text><text x="112" textLength="88" font-weight="bold" class="color12">~/work/purr</text><text x="200" textLength="48" class="foreground">$ ./ru</text><text x="248" textLength="8" class="background"> </text></g><g id="g19"><text x="0" textLength="104" font-weight="bold" class="color10">cdrubin@molly</text><text x="104" textLength="8" class="foreground">:</text><text x="112" textLength="88" font-weight="bold" class="color12">~/work/purr</text><text x="200" textLength="56" class="foreground">$ ./run</text><text x="256" textLength="8" class="background"> </text></g><g id="g20"><text x="0" textLength="104" font-weight="bold" class="color10">cdrubin@molly</text><text x="104" textLength="8" class="foreground">:</text><text x="112" textLength="88" font-weight="bold" class="color12">~/work/purr</text><text x="200" textLength="88" class="foreground">$ ./run.sh </text><text x="288" textLength="8" class="background"> </text></g><g id="g21"><text x="0" textLength="104" font-weight="bold" class="color10">cdrubin@molly</text><text x="104" textLength="8" class="foreground">:</text><text x="112" textLength="88" font-weight="bold" class="color12">~/work/purr</text><text x="200" textLength="88" class="foreground">$ ./run.sh </text></g><g id="g22"><text x="0" textLength="464" class="foreground">purr container starting... (and serving HTTP on port 8806)</text></g><g id="g23"><text x="0" textLength="512" class="foreground">29eaf4403c317b630d3205b807b484cf32608d3d8dc95ecf1068a79ea9f12283</text></g><g id="g24"><text x="0" textLength="104" font-weight="bold" class="color10">cdrubin@molly</text><text x="104" textLength="8" class="foreground">:</text><text x="112" textLength="88" font-weight="bold" class="color12">~/work/purr</text><text x="200" textLength="48" class="foreground">$ exit</text></g></defs><g id="screen_view"><g><rect x="0" y="0" width="8" height="17" class="foreground"/><use xlink:href="#g1" y="0"/></g><g><rect x="216" y="442" width="8" height="17" class="foreground"/><use xlink:href="#g2" y="442"/></g><g><rect x="224" y="884" width="8" height="17" class="foreground"/><use xlink:href="#g3" y="884"/></g><g><rect x="232" y="1326" width="8" height="17" class="foreground"/><use xlink:href="#g4" y="1326"/></g><g><rect x="240" y="1768" width="8" height="17" class="foreground"/><use xlink:href="#g5" y="1768"/></g><g><rect x="248" y="2210" width="8" height="17" class="foreground"/><use xlink:href="#g6" y="2210"/></g><g><rect x="256" y="2652" width="8" height="17" class="foreground"/><use xlink:href="#g7" y="2652"/></g><g><use xlink:href="#g8" y="3094"/><rect x="0" y="3111" width="8" height="17" class="foreground"/><use xlink:href="#g1" y="3111"/></g><g><rect x="216" y="3536" width="8" height="17" class="foreground"/><use xlink:href="#g9" y="3536"/></g><g><rect x="224" y="3978" width="8" height="17" class="foreground"/><use xlink:href="#g10" y="3978"/></g><g><rect x="232" y="4420" width="8" height="17" class="foreground"/><use xlink:href="#g11" y="4420"/></g><g><use xlink:href="#g12" y="4862"/><rect x="0" y="4879" width="8" height="17" class="foreground"/><use xlink:href="#g1" y="4879"/></g><g><use xlink:href="#g12" y="5304"/><use xlink:href="#g13" y="5321"/><use xlink:href="#g14" y="5338"/><rect x="0" y="5355" width="8" height="17" class="foreground"/><use xlink:href="#g1" y="5355"/></g><g><use xlink:href="#g12" y="5746"/><use xlink:href="#g13" y="5763"/><use xlink:href="#g14" y="5780"/><rect x="216" y="5797" width="8" height="17" class="foreground"/><use xlink:href="#g2" y="5797"/></g><g><use xlink:href="#g12" y="6188"/><use xlink:href="#g13" y="6205"/><use xlink:href="#g14" y="6222"/><rect x="224" y="6239" width="8" height="17" class="foreground"/><use xlink:href="#g15" y="6239"/></g><g><use xlink:href="#g12" y="6630"/><use xlink:href="#g13" y="6647"/><use xlink:href="#g14" y="6664"/><rect x="232" y="6681" width="8" height="17" class="foreground"/><use xlink:href="#g16" y="6681"/></g><g><use xlink:href="#g12" y="7072"/><use xlink:href="#g13" y="7089"/><use xlink:href="#g14" y="7106"/><rect x="240" y="7123" width="8" height="17" class="foreground"/><use xlink:href="#g17" y="7123"/></g><g><use xlink:href="#g12" y="7514"/><use xlink:href="#g13" y="7531"/><use xlink:href="#g14" y="7548"/><rect x="248" y="7565" width="8" height="17" class="foreground"/><use xlink:href="#g18" y="7565"/></g><g><use xlink:href="#g12" y="7956"/><use xlink:href="#g13" y="7973"/><use xlink:href="#g14" y="7990"/><rect x="256" y="8007" width="8" height="17" class="foreground"/><use xlink:href="#g19" y="8007"/></g><g><use xlink:href="#g12" y="8398"/><use xlink:href="#g13" y="8415"/><use xlink:href="#g14" y="8432"/><rect x="288" y="8449" width="8" height="17" class="foreground"/><use xlink:href="#g20" y="8449"/></g><g><use xlink:href="#g12" y="8840"/><use xlink:href="#g13" y="8857"/><use xlink:href="#g14" y="8874"/><use xlink:href="#g21" y="8891"/><rect x="0" y="8908" width="8" height="17" class="foreground"/><use xlink:href="#g1" y="8908"/></g><g><use xlink:href="#g12" y="9282"/><use xlink:href="#g13" y="9299"/><use xlink:href="#g14" y="9316"/><use xlink:href="#g21" y="9333"/><use xlink:href="#g22" y="9350"/><rect x="0" y="9367" width="8" height="17" class="foreground"/><use xlink:href="#g1" y="9367"/></g><g><use xlink:href="#g12" y="9724"/><use xlink:href="#g13" y="9741"/><use xlink:href="#g14" y="9758"/><use xlink:href="#g21" y="9775"/><use xlink:href="#g22" y="9792"/><use xlink:href="#g23" y="9809"/><rect x="0" y="9826" width="8" height="17" class="foreground"/><use xlink:href="#g1" y="9826"/></g><g><use xlink:href="#g12" y="10166"/><use xlink:href="#g13" y="10183"/><use xlink:href="#g14" y="10200"/><use xlink:href="#g21" y="10217"/><use xlink:href="#g22" y="10234"/><use xlink:href="#g23" y="10251"/><rect x="216" y="10268" width="8" height="17" class="foreground"/><use xlink:href="#g2" y="10268"/></g><g><use xlink:href="#g12" y="10608"/><use xlink:href="#g13" y="10625"/><use xlink:href="#g14" y="10642"/><use xlink:href="#g21" y="10659"/><use xlink:href="#g22" y="10676"/><use xlink:href="#g23" y="10693"/><use xlink:href="#g24" y="10710"/><rect x="0" y="10727" width="8" height="17" class="foreground"/><use xlink:href="#g1" y="10727"/></g></g></svg>
+</svg>
