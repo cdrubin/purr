@@ -6,14 +6,14 @@ if [ ! -f "started" ]; then
     apk add redis
     apk add postgresql
     
-    # prepare postgresql if not done before
-    if [ ! -f /var/lib/postgresql/postgresql.conf ]; then
-        chown postgres /var/lib/postgresql; chmod 750 /var/lib/postgresql
-        su - postgres -c "initdb /var/lib/postgresql"
-        cp /root/purr/conf/postgresql/postgresql.conf /var/lib/postgresql
-        mkdir /run/postgresql
-        chown -R postgres /run/postgresql
-    fi
+#    # prepare postgresql if not done before
+    chown postgres /var/lib/postgresql; chmod 750 /var/lib/postgresql
+    su - postgres -c "initdb /var/lib/postgresql"
+    cp /root/purr/conf/postgresql/postgresql.conf /var/lib/postgresql
+    mkdir /run/postgresql
+    chown postgres /run/postgresql
+    chown postgres /var/log/postgresql; chmod 750 /var/log/postgresql
+
     touch started
 fi
 

@@ -24,8 +24,9 @@ else
     echo "purr container starting... (and serving HTTP on port $PORT)"
     docker run \
       -p 0.0.0.0:$PORT:80 \
-      -v "$SCRIPT_DIR/logs/nginx:/usr/local/openresty/nginx/logs" \
-      -v "$SCRIPT_DIR/logs/redis:/var/log/redis" \
+      -v "$SCRIPT_DIR/log/nginx:/usr/local/openresty/nginx/logs" \
+      -v "$SCRIPT_DIR/log/redis:/var/log/redis" \
+      -v "$SCRIPT_DIR/log/postgresql:/var/log/postgresql" \
       -v "$SCRIPT_DIR/conf/redis:/usr/share/redis" \
       -v "$SCRIPT_DIR/data/postgresql:/var/lib/postgresql" \
       -v "$SCRIPT_DIR/site:/usr/local/openresty/site" \
