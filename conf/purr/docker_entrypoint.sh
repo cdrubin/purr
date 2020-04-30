@@ -17,6 +17,7 @@ if [ ! -f "started" ]; then
     # install required luarocks (improve with a luarocks file in conf or site/ or similar?)
     /usr/local/openresty/luajit/bin/luarocks install pgmoon
     /usr/local/openresty/luajit/bin/luarocks install inspect
+    /usr/local/openresty/luajit/bin/luarocks install --server=https://luarocks.org/dev wimbly-lib
     
     touch started
 fi
