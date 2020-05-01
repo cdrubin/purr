@@ -7,6 +7,9 @@ if [ ! -f "started" ]; then
     apk add redis
     apk add postgresql
     
+    # install inotifytools for filesystem watching
+    apk add inotifytools
+    
     chown postgres /var/lib/postgresql; chmod 750 /var/lib/postgresql
     su - postgres -c "initdb /var/lib/postgresql"
     cp /root/purr/conf/postgresql/postgresql.conf /var/lib/postgresql
@@ -17,6 +20,8 @@ if [ ! -f "started" ]; then
     # install required luarocks (improve with a luarocks file in conf or site/ or similar?)
     /usr/local/openresty/luajit/bin/luarocks install pgmoon
     /usr/local/openresty/luajit/bin/luarocks install inspect
+    /usr/local/openresty/luajit/bin/luarocks install LuaFileSystem
+    
     /usr/local/openresty/luajit/bin/luarocks install --server=https://luarocks.org/dev wimbly-lib
     
     touch started
@@ -29,7 +34,7 @@ fi
 su - postgres -c "pg_ctl -D /var/lib/postgresql start"
 
 # start filewatcher for site/ file changes
-/root/purr/conf/nginx/watch_for_changes.sh
+#/root/purr/conf/nginx/watch_for_changes.sh
 
 # start openresty
 /usr/local/openresty/bin/openresty -g "daemon off;"
