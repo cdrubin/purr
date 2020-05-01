@@ -8,7 +8,7 @@ if [ ! -f "started" ]; then
     apk add postgresql
     
     # install inotifytools for filesystem watching
-    apk add inotifytools
+    apk add inotify-tools
     
     chown postgres /var/lib/postgresql; chmod 750 /var/lib/postgresql
     su - postgres -c "initdb /var/lib/postgresql"
@@ -33,8 +33,8 @@ fi
 # start postgresql
 su - postgres -c "pg_ctl -D /var/lib/postgresql start"
 
-# start filewatcher for site/ file changes
-#/root/purr/conf/nginx/watch_for_changes.sh
+# start file watcher for site/ file configuration changes
+/root/purr/conf/openresty/watch_for_changes.sh &> /usr/local/openresty/nginx/logs/file_watcher.log &
 
 # start openresty
 /usr/local/openresty/bin/openresty -g "daemon off;"

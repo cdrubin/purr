@@ -24,13 +24,13 @@ else
     echo "purr container starting... (and serving HTTP on port $PORT)"
     docker run \
       -p 0.0.0.0:$PORT:80 \
-      -v "$SCRIPT_DIR/log/nginx:/usr/local/openresty/nginx/logs" \
+      -v "$SCRIPT_DIR/log/openresty:/usr/local/openresty/nginx/logs" \
       -v "$SCRIPT_DIR/log/redis:/var/log/redis" \
       -v "$SCRIPT_DIR/log/postgresql:/var/log/postgresql" \
       -v "$SCRIPT_DIR/conf/redis:/usr/share/redis" \
       -v "$SCRIPT_DIR/data/postgresql:/var/lib/postgresql" \
       -v "$SCRIPT_DIR/site:/usr/local/openresty/site" \
-      -v "$SCRIPT_DIR/conf/nginx:/etc/nginx/conf.d" \
+      -v "$SCRIPT_DIR/conf/openresty:/etc/nginx/conf.d" \
       -v "$SCRIPT_DIR:/root/purr" \
       -d --name purr-container --entrypoint /root/purr/conf/purr/docker_entrypoint.sh -i openresty/openresty:alpine-fat
 fi

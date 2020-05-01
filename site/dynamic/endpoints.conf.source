@@ -1,9 +1,9 @@
-
+   
 location = /here {
     
     content_by_lua '
         ngx.header.content_type = "text/html"
-        ngx.say( "Here and there! (and how and then 2)" )
+        ngx.say( "Here and now!" )
     ';
 }
 
